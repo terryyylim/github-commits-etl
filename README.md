@@ -11,6 +11,8 @@ This README assumes the user has Docker and pip3 installed locally.
 ### Summary
 This project is an ETL pipeline which curls the [Github Commits API](https://developer.github.com/v3/repos/commits/#list-commits-on-a-repository) endpoint. The ETL pipeline allows 4 parameters to be inserted (GitHub owner/organization name, GitHub repository name, start date, end date). The data extracted from the endpoint is then transformed and inserted into a Postgres DB, along with a few insights created.
 
+The image <u>output/heatmap_example.png</u> was generated using ```python3 main.py --organization='apache' --repository='airflow' --start_date='2020-03-20T00:00:00' --end_date='2020-04-10T00:00:00'```.
+
 ### Project Structure
 1. main.py
     * Contains CLI for triggering ETL pipeline.
