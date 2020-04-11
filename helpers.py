@@ -150,6 +150,10 @@ def get_insight_3_df(temp_df: pd.DataFrame) -> pd.DataFrame:
     day_cats = pd.CategoricalDtype(categories=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], ordered=True)
     insight_3_df['day'] = insight_3_df['day'].astype(day_cats)
 
+    # Sort by time_interval column
+    time_interval_cats = pd.CategoricalDtype(categories=['12am-3am', '3am-6am', '6am-9am', '9am-12pm', '12pm-3pm', '3pm-6pm', '6pm-9pm', '9pm-12am'], ordered=True)
+    insight_3_df['time_interval'] = insight_3_df['time_interval'].astype(time_interval_cats)
+
     return insight_3_df
 
 
