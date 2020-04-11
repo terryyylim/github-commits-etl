@@ -2,7 +2,6 @@
 
 ## Content
 * [Summary](#Summary)
-* [ETL](#ETL)
 * [Project structure](#Project-structure)
 * [Installation](#Installation)
 
